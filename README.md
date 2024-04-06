@@ -4,11 +4,11 @@ This Spring Boot application demonstrates the implementation of a filter to inte
 
 ## Filter
 
-The filter (`AuthFilter`) intercepts incoming HTTP requests and checks if the header "PinggyAuthHeader" is present. If the header is present and not empty, the value is stored in a ThreadLocal variable. If the header is missing or empty, the filter responds with HTTP status code 401 (Unauthorized).
+The filter (`CustomAuthenticationFilter`) intercepts incoming HTTP requests and checks if the header "PinggyAuthHeader" is present. If the header is present and not empty, the value is stored in a ThreadLocal variable. If the header is missing or empty, the filter responds with HTTP status code 401 (Unauthorized).
 
 ## Controller
 
-The controller (`MainController`) handles a GET request on the path "/". It retrieves the value of the header "PinggyAuthHeader" from the ThreadLocal storage and returns it as a response body. If the header value is empty, it returns an error response with HTTP status code 401 (Unauthorized) in JSON format.
+The controller (`PinggyController`) handles a GET request on the path "/". It retrieves the value of the header "PinggyAuthHeader" from the ThreadLocal storage and returns it as a response body. If the header value is empty, it returns an error response with HTTP status code 401 (Unauthorized) in JSON format.
 
 ## Usage
 

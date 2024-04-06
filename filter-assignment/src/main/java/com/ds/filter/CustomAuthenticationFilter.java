@@ -2,12 +2,14 @@ package com.ds.filter;
 
 import java.io.IOException;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+@Component
 public class CustomAuthenticationFilter extends OncePerRequestFilter {
 
     private static final String AUTH_HEADER_NAME = "PinggyAuthHeader";
